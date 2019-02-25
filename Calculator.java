@@ -3,7 +3,7 @@
  * ID#: 458
  * Description: a calculator app that can add,sub, mult and div, with a history function
  * @since 2019-02-25
- * @version 1.0
+ * @version 2.0
  * 
  */
 
@@ -13,7 +13,10 @@ package cse360assign2;
 
 
 public class Calculator {
-
+	
+	
+	
+	//global total value
 	private int total;
 	
 	/**
@@ -40,6 +43,8 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		
+		total = total + value;
+		
 	}
 	
 	/**
@@ -48,6 +53,8 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		
+		total = total - value;
+		
 	}
 	
 	/**
@@ -55,6 +62,7 @@ public class Calculator {
 	 * @param value
 	 */
 	public void multiply (int value) {
+		total = total * value;
 		
 	}
 	
@@ -63,6 +71,12 @@ public class Calculator {
 	 * @param value
 	 */
 	public void divide (int value) {
+		
+		if (value == 0)
+		{
+			total = 0;
+		}
+		total = total / value;
 		
 	}
 	
